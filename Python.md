@@ -110,23 +110,19 @@ print(**txt.format(age)**)
 
 ## IF 
 
-if a > b:
+    if a > b:
+    ____
+    
+        elif a == b:
+        _____
 
-    ___
-
-elif a == b:
-
-    _____
-
-else:
-
-    ______
+            else:
+            _____
 
 ## WHILE
 
-while (___):
-
-    _____
+    while (___):
+    ____
 
     if____:
 
@@ -134,8 +130,7 @@ while (___):
 
             - Para o loop 
 
-while (___):
-
+    while (___):
     _____
 
     if____:
@@ -143,8 +138,7 @@ while (___):
         **continue**; 
 
             - Passa para a próxima iteração
-
-    _____
+    
 
 ## FOR
 
@@ -158,13 +152,12 @@ while (___):
 
 **def my_function():** 
     - Definição de função básica
-
-______
+_____
 
 **return** _
 
 **def my_function(*args, *kwargs):** 
-    - Aceita um número variável de argumentos posicionais (*args) e argumentos de palavra-chave (*kwargs**)
+    - Aceita um número variável de argumentos posicionais (*args) e argumentos de palavra-chave (*kwarg*)
 
 ______
 
