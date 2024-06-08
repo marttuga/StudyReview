@@ -168,36 +168,37 @@ ______
 
 ## CLASSES
 
-**class MyClass:** 
+    **class MyClass:** 
     - Definição de classe
 
-x = 5
+    x = 5
 
-p1 = MyClass()
+    p1 = MyClass()
 
-print(p1.x)
+    print(p1.x)
 
-**class Person:**
 
-**def __init__(self, name, _, _):** 
+    **class Person:**
+
+    **def __init__(self, name, _, _):** 
     - Função de inicialização
 
-self.name = name 
+    self.name = name 
 
-self._ = _  
+    self._ = _  
 
-self._ = _  
+    self._ = _  
 
-def printName(self):
+    def printName(self):
 
     print(self.name)
 
-**class Student(Person):**  
+    **class Student(Person):**  
     - Herança
 
-x = Student("Mike")
+    x = Student("Mike")
 
-x.printName()
+    x.printName()
 
 ## MODULOS
 
