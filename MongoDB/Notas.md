@@ -1,5 +1,6 @@
 *MONGODB - base de dados NOSQL - orientada a DOCUMENTOS*
 
+
 ## Visualização e Seleção de Bases de Dados
 *show dbs* - todas as bases de dados
 
@@ -7,13 +8,19 @@
 
 *show collections* - lista todas as coleções na base de dados atual
 
+
+
 ## Criação de Coleções
 *db.createCollection( "produtos" )* - cria nova coleção produtos
+
+
 
 ## Inserção de Documentos
 *db.produtos.**insertMany**( object )* - object(array de documentos), o insertMany insere todos os documentos duma vez
 
 *db.produtos.**insertOne**({ chave: "valor" })* - insere um único documento na coleção especificada
+
+
 
 ## Consulta de Documentos
 *db.produtos.**find**( {category: "Tech"} )* - encontra todos com a categoria Tech
@@ -34,6 +41,8 @@
 
 *db.produtos.find({ **$text**: { **$search**: "termo" }})* - realiza uma busca full-text
 
+
+
 ## Atualização de Documentos
 *db.produtos.**update**({ nome:"livro"}, { **$set**: {preço : 10 }}, { **upsert: true** })* - set substitui valor e o upsert atualiza documento existente, caso não haja, insere um novo
 
@@ -49,17 +58,23 @@
 
 *db.produtos.updateOne({ chave: "valor" }, { **$pull**: { array: "elemento_a_remover" }})* - remove um elemento específico de um array
 
+
+
 ## Exclusão de Documentos
 *db.produtos.**deleteMany**( {category: "Tech"} )* - apaga todos com a categoria Tech
 
 *db.produtos.**deleteOne**({ chave: "valor" })* - exclui um único documento que corresponda ao critério de busca
+
+
 
 ## Indexação
 *db.produtos.**createIndex**({ chave: 1 })* - cria um índice para um campo, melhorando o desempenho de consultas (1 para crescente, -1 para decrescente)
 
 *db.produtos.createIndex({ campo: "text" })* - cria um índice de texto para busca full-text
 
+
+
 ## Agregação
-*db.produtos.**aggregate**( [ { **$match**: {data: { **$gte**: new Date("2024-03-01")}}}, { **$group**: { _id: "$produto", total_vendas: { **$sum**: "$valor"}}}]) - juntar vários estágios, calcular o total de vendas de cada produto($sum) nos últimos três meses($match,$gte)
+*db.produtos.**aggregate**( [ { **$match**: {data: { **$gte**: new Date("2024-03-01")}}}, { **$group**: { _id: "$produto", total_vendas: { **$sum**: "$valor"}}}])* - juntar vários estágios, calcular o total de vendas de cada produto($sum) nos últimos três meses($match,$gte)
 
 *db.produtos.aggregate([ { $match: { chave: "valor" }}, { $count: "total_documentos" }])* - conta documentos que correspondem ao critério de busca usando o pipeline de agregação

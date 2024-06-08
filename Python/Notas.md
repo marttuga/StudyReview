@@ -1,18 +1,23 @@
-*PYTHON*
+## PYTHON
 
 *print ("__")* - imprimir
 
+
 # - comentários
+
 
 """ - várias linhas de comentários """
 
-*VARIÁVEIS LIVRES*
+
+## VARIÁVEIS LIVRES
 
 carname = "Volvo" 
 d = 50
 x, y, z = "banana", "maça", "uva"
 
-*TIPOS* 
+
+
+## TIPOS 
 
 *bool (0)* - False
 *bool (1*) - True
@@ -28,7 +33,9 @@ x, y, z = "banana", "maça", "uva"
 *set* - {1, 2, 4, 3, 5} coleção não ordenada e mutável de elementos únicos
 *dict* - {"nome": "João", "idade": 30, "cidade": "São Paulo"} coleção não ordenada e mutável, representado por um par chave-valor
 
-*STRINGS*
+
+
+## STRINGS
 
 *txt.capitalize()* - converte o primeiro caractere para maiúscula
 *txt.split()* - divide a string em uma lista de substrings
@@ -40,7 +47,9 @@ age = 36
 txt = "_ age is {}"
 print(*txt.format(age)*)
 
-*LIST*
+
+
+## LIST
 
 *list.append("_")* - adicionar à lista
 *list.insert(1, "a")* - inserir no índice 1
@@ -49,12 +58,16 @@ print(*txt.format(age)*)
 *list[2:5]* - índices de 2 a 4, terceiro, quarto e quinto elementos
 *len(list)* - tamanho da lista
 
-**SET**
+
+
+## SET
 
 *set.update(lista)* - acrescentar a lista ao set
 *set.discard("_")* - remover elemento do set
 
-*DICTIONARY*
+
+
+## DICTIONARY
 
 *car={"a": _, "b": _}*
 
@@ -64,7 +77,9 @@ print(*txt.format(age)*)
 *car.pop("b")* - remove a chave "b"
 *car.clear()* - limpa todo o dicionário
 
-*IF* 
+
+
+## IF 
 
 if a > b:
     ___
@@ -74,7 +89,8 @@ else:
     ______
 
 
-*WHILE*
+
+## WHILE
 
 while (___):
     _____
@@ -88,12 +104,15 @@ while (___):
     _____
 
 
-*FOR*
+
+## FOR
 
 *for x in enumerate(iterable)* - para cada elemento e seu índice em um iterável
 *for x in range(6)* - para cada número de 0 a 5
 
-*FUNÇÕES*
+
+
+## FUNÇÕES
 
 *def my_function():* - definição de função básica
 ______
@@ -102,11 +121,15 @@ ______
 *def my_function(*args, *kwargs):* - aceita um número variável de argumentos posicionais (*args) e argumentos de palavra-chave (*kwargs**)
 ______
 
-*LAMBDA*
+
+
+## LAMBDA
 
 *x = lambda a: a* - toma o argumento a e retorna-o
 
-*CLASSES*
+
+
+## CLASSES
 
 *class MyClass:* - definição de classe
 x = 5
@@ -129,7 +152,9 @@ def printName(self):
 x = Student("Mike")
 x.printName()
 
-*MODULOS*
+
+
+## MODULOS
 
 *import module* - importa um módulo inteiro
 *import module as alias* - importa um módulo com um alias
