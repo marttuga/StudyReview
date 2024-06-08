@@ -4,8 +4,7 @@
 
 # - comentários
 
-""" - várias linhas de comentários
-"""
+""" - várias linhas de comentários """
 
 *VARIÁVEIS LIVRES*
 
@@ -31,13 +30,11 @@ x, y, z = "banana", "maça", "uva"
 
 *STRINGS*
 
-*txt.len()* - comprimento
-*txt[0]* - index 0 1º posiçao
-*txt[2:5]* - do index 2 ao 4
-*txt.strip(*) - tirar espaços brancos
-*txt.upper()* - para maiusculo
-*txt.lower()* - para minusculo
-*txt.replace( "a" , "b"*) - substitui o a pelo b
+*txt.capitalize()* - converte o primeiro caractere para maiúscula
+*txt.split()* - divide a string em uma lista de substrings
+*" ".join(iterable)* - junta os elementos de um iterable (como uma lista) em uma string, separados por um espaço
+*txt.startswith(prefix)* - verifica se a string começa com o prefixo especificado
+*txt.endswith(suffix)* - verifica se a string termina com o sufixo especificado
 
 age = 36
 txt = "_ age is {}"
@@ -45,102 +42,98 @@ print(*txt.format(age)*)
 
 *LIST*
 
-*list.append( "_" )* - adicionar à lista
-*list.insert( 1 , "a" )* - inserir no index 1
-*list.remove( "_" )* - remover da lista
-*list[-1]* - ultima posiçao (len-1)
-*list[2:5]* - index 2-5 , 3º, 4º e 5º elementos
-*len( list )* - tamanho da lista
+*list.append("_")* - adicionar à lista
+*list.insert(1, "a")* - inserir no índice 1
+*list.remove("_")* - remover da lista
+*list[-1]* - última posição (len-1)
+*list[2:5]* - índices de 2 a 4, terceiro, quarto e quinto elementos
+*len(list)* - tamanho da lista
 
-**SET
+**SET**
 
-*set.update( lista )* - acrescentar a lista ao set
-*set.discard( "_" )* - remover elemento do set
+*set.update(lista)* - acrescentar a lista ao set
+*set.discard("_")* - remover elemento do set
 
 *DICTIONARY*
 
-*car={ "a": _ , "b": _ }*
+*car={"a": _, "b": _}*
 
-*print(car.get( "a" ))* - imprime o a e o valor
-*car[ "a" ] = "c"* - muda a para c
-*car[ "d" ] = "_"* - acrescenta o d e o valor ao dicionario
-*car.pop( "b" )* - remove o b
-*car.clear()* - limpa o dict todo
+*print(car.get("a"))* - imprime a chave "a" e o valor correspondente
+*car["a"] = "c"* - muda o valor associado à chave "a" para "c"
+*car["d"] = "_"* - acrescenta a chave "d" e o valor ao dicionário
+*car.pop("b")* - remove a chave "b"
+*car.clear()* - limpa todo o dicionário
 
 *IF* 
 
 if a > b:
-____
-    elif a==b:
+    ___
+elif a == b:
     _____
-        else:
-        ______
+else:
+    ______
 
 
 *WHILE*
 
 while (___):
-_____
+    _____
     if____:
-    *break*; - parar o loop 
+        *break*; - para o loop 
 
 while (___):
-_____
+    _____
     if____:
-    *continue*; - passa à próxima ação
-
-while (___):
-_____
-    else:
-    ____
+        *continue*; - passa para a próxima iteração
+    _____
 
 
 *FOR*
 
-*for x in list* - por cada x na lista
-*for x in range(6)* - por cada x 6vezes no loop
+*for x in enumerate(iterable)* - para cada elemento e seu índice em um iterável
+*for x in range(6)* - para cada número de 0 a 5
 
+*FUNÇÕES*
 
-*FUNÇOES*
-
-*def my_function():* - definiçao da funçao normal
+*def my_function():* - definição de função básica
 ______
 *return* _
 
-*def my_function():* - nao se sabe o nº de argumentos
-*def my_function(* x):** - nº de keywords
+*def my_function(*args, *kwargs):* - aceita um número variável de argumentos posicionais (*args) e argumentos de palavra-chave (*kwargs**)
+______
 
 *LAMBDA*
 
-*x= lambda a:a* - toma o a e retorna-o
-
+*x = lambda a: a* - toma o argumento a e retorna-o
 
 *CLASSES*
 
-*class MyClass:* -definiçao da classe
+*class MyClass:* - definição de classe
 x = 5
 p1 = MyClass()
 
-print( p1.x )
+print(p1.x)
 
 
 *class Person:*
-*def _init_( name, _ , _ ):* - init function
+*def __init__(self, name, _, _):* - função de inicialização
 
 self.name = name 
 self._ = _  
 self._ = _  
 
 def printName(self):
-print( self.name )
+    print(self.name)
 
-*class Student(Person):*  - INHERITANCE
+*class Student(Person):*  - HERANÇA
 x = Student("Mike")
 x.printName()
 
 *MODULOS*
 
-*import myModule* - importar
-*import myModule as m* - renomear
-*print( dir( myModule ) )* - imprime todas as variaveis e nomes das funçoes
-*from myModule import "__"* - importar so um especifico
+*import module* - importa um módulo inteiro
+*import module as alias* - importa um módulo com um alias
+*from module import name* - importa um nome específico de um módulo
+*print(dir(module))* - imprime todas as variáveis e nomes das funções do módulo
+*from package import module* - importa um módulo de um pacote
+*from package.module import name* - importa um nome específico de um módulo em um pacote
