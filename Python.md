@@ -2,7 +2,7 @@
 
 **print ("__")** - imprimir
 
-# - comentários
+#- comentários
 
 **"""** - várias linhas de comentários **"""**
 
@@ -48,6 +48,11 @@ x, y, z = "banana", "maça", "uva"
 
 **" ".join(iterable)** 
     - Junta os elementos de um iterable (como uma lista) em uma string, separados por um espaço
+    
+    words = ["hello", "world"]
+    joined_string = " ".join(words)
+    print(joined_string)  - hello world
+
 
 **txt.startswith(prefix)** 
     - Verifica se a string começa com o prefixo especificado
@@ -111,93 +116,92 @@ print(**txt.format(age)**)
 ## IF 
 
     if a > b:
-    ____
+        print("a é maior que b")
     
-        elif a == b:
-        _____
-
-            else:
-            _____
+    elif a == b:
+        print("a é igual a b")
+    
+    else:
+        print("a é menor que b")
 
 ## WHILE
 
-    while (___):
-    ____
+    i = 1
+    while i < 6:
+        print(i)
+        if i == 3:
+            break
+        i += 1
 
-    if____:
-
-        **break**; 
-
-            - Para o loop 
-
-    while (___):
-    _____
-
-    if____:
-
-        **continue**; 
-
-            - Passa para a próxima iteração
-    
+    j = 1
+    while j < 6:
+        j += 1
+        if j == 3:
+            continue
+        print(j)
 
 ## FOR
 
 **for x in enumerate(iterable)** 
     - Para cada elemento e seu índice em um iterável
 
+    fruits = ["apple", "banana", "cherry"]
+    for index, value in enumerate(fruits):
+        print(index, value)
+
 **for x in range(6)** 
     - Para cada número de 0 a 5
+
+    for x in range(6):
+        print(x)
 
 ## FUNÇÕES
 
 **def my_function():** 
     - Definição de função básica
-_____
+    
+    def my_function():
+        return "Hello, World!"
 
-**return** _
 
-**def my_function(*args, *kwargs):** 
-    - Aceita um número variável de argumentos posicionais (*args) e argumentos de palavra-chave (*kwarg*)
+**def my_function(*args, **kwargs):** 
+    - Aceita um número variável de argumentos posicionais (*args) e argumentos de palavra-chave (**kwargs)
 
-______
+    def my_function(*args, **kwargs):
+        for arg in args:
+            print(arg)
+        for key, value in kwargs.items():
+            print(key, value)
 
 ## LAMBDA
 
 **x = lambda a: a** 
     - Toma o argumento a e retorna-o
 
+    add_10 = lambda x: x + 10
+    print(add_10(5))  - Saída: 15
+
+
 ## CLASSES
-
-    **class MyClass:** 
-    - Definição de classe
-
-    x = 5
-
+    
+    class MyClass:
+        x = 5
+    
     p1 = MyClass()
-
     print(p1.x)
 
+    class Person:
+        def __init__(self, name, age):
+            self.name = name 
+            self.age = age
 
-    **class Person:**
+        def printName(self):
+            print(self.name)
 
-    **def __init__(self, name, _, _):** 
-    - Função de inicialização
-
-    self.name = name 
-
-    self._ = _  
-
-    self._ = _  
-
-    def printName(self):
-
-    print(self.name)
-
-    **class Student(Person):**  
-    - Herança
-
-    x = Student("Mike")
-
+    class Student(Person):
+        pass
+    
+    x = Student("Mike", 22)
     x.printName()
 
 ## MODULOS
@@ -205,17 +209,27 @@ ______
 **import module** 
     - Importa um módulo inteiro
 
+    import math
+
 **import module as alias** 
     - Importa um módulo com um alias
+
+    import math as m
 
 **from module import name** 
     - Importa um nome específico de um módulo
 
+    from math import sqrt
+
 **print(dir(module))** 
     - Imprime todas as variáveis e nomes das funções do módulo
+
+    print(dir(math))
 
 **from package import module** 
     - Importa um módulo de um pacote
 
 **from package.module import name** 
     - Importa um nome específico de um módulo em um pacote
+
+    from os import path
