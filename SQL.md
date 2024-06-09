@@ -1,4 +1,4 @@
-**MYSQL - base de dados RELACIONAL**
+## MYSQL - base de dados RELACIONAL
 
 ## Seleção de Dados  
 **SELECT** - selecionar  
