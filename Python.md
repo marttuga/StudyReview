@@ -1,235 +1,139 @@
 ## PYTHON
 
-**print ("__")** - imprimir
+```python
+print("Hello World")
+```
+#- Comentário
 
-#- comentários
+"""
+Comentário
+de
+várias
+linhas
+"""
 
-**"""** - várias linhas de comentários **"""**
+## TIPOS DE DADOS
+```python
+myNum = 9
 
-## VARIÁVEIS LIVRES
+myFloatNum = 8.99
 
-carname = "Volvo" 
+myLetter = 'A'
 
-d = 50
+myBool = False
 
-x, y, z = "banana", "maça", "uva"
+myText = "Hello World"
+```
+## OPERADORES
+```python
+x = 5
+y = 3
 
-## TIPOS 
+result = x * y  # result será 15
 
-**bool (0)** - False
+result = x / y  # result será 1
 
-**bool (1)**  - True
+z = 5
+z += 1  # z será 6
 
-**int** - 1,2,3,4,....
-
-**str** - 'ola' ou "ola"
-
-**float** - 0.2
-
-**list** - [1, 2, 3, 4, 5] 
-    - Coleção ordenada e mutável de elementos
-
-**tuple** - (1, 2, 3, 4, 5) 
-    - Sequência ordenada e imutável de elementos
-
-**set** - {1, 2, 4, 3, 5} 
-    - Coleção não ordenada e mutável de elementos únicos
-
-**dict** - {"nome": "João", "idade": 30, "cidade": "São Paulo"} 
-    - Coleção não ordenada e mutável, representada por um par chave-valor
-
+a = 10
+a += 5  # a será 15
+```
 ## STRINGS
+```python
 
-**txt.capitalize()** 
-    - Converte o primeiro caractere para maiúscula
+txt = "Hello"
+txt_length = len(txt)  # Retorna o comprimento da string (5)
 
-**txt.split()** 
-    - Divide a string em uma lista de substrings
+upper_txt = txt.upper()  # Retorna "HELLO"
 
-**" ".join(iterable)** 
-    - Junta os elementos de um iterable (como uma lista) em uma string, separados por um espaço
-    
-    words = ["hello", "world"]
-    joined_string = " ".join(words)
-    print(joined_string)  - hello world
+lower_txt = txt.lower()  # Retorna "hello"
 
+txt1 = "Hello"
+txt2 = " World"
+concat_txt = txt1 + txt2  # Retorna "Hello World"
 
-**txt.startswith(prefix)** 
-    - Verifica se a string começa com o prefixo especificado
+concat_txt_method = txt1.concat(txt2)  # Retorna "Hello World"
 
-**txt.endswith(suffix)** 
-    - Verifica se a string termina com o sufixo especificado
+index_e = txt.index("e")  # Retorna o índice onde 'e' aparece pela primeira vez (1)
+```
+## ESTRUTURAS DE DADOS
+```python
 
-age = 36
+### Listas
 
-txt = "_ age is {}"
+my_list = ["apple", "banana", "cherry"]
+print(my_list)  # Saída: ['apple', 'banana', 'cherry']
 
-print(**txt.format(age)**)
+### Dicionários
 
-## LIST
+my_dict = {"nome": "João", "idade": 30, "cidade": "São Paulo"}
 
-**list.append("_")** 
-    - Adicionar à lista
+### Conjuntos
 
-**list.insert(1, "a")** 
-    - Inserir no índice 1
+my_set = {1, 2, 3, 4, 5}
 
-**list.remove("_")** 
-    - Remover da lista
+### Tuplas
 
-**list[-1]** 
-    - Última posição (len-1)
+my_tuple = (1, 2, 3, 4, 5)
+```
+## IF
+```python
 
-**list[2:5]** 
-    - Índices de 2 a 4, terceiro, quarto e quinto elementos
+time = 20
+if time < 18:
+    print("Good day.")
+else:
+    print("Good evening.")
 
-**len(list)** 
-    - Tamanho da lista
-
-## SET
-
-**set.update(lista)** 
-    - Acrescentar a lista ao set
-
-**set.discard("_")** 
-    - Remover elemento do set
-
-## DICTIONARY
-
-**car={"a": _, "b": _}**
-
-**print(car.get("a"))** 
-    - Imprime a chave "a" e o valor correspondente
-
-**car["a"] = "c"** 
-    - Muda o valor associado à chave "a" para "c"
-
-**car["d"] = "_"** 
-    - Acrescenta a chave "d" e o valor ao dicionário
-
-**car.pop("b")** 
-    - Remove a chave "b"
-
-**car.clear()** 
-    - Limpa todo o dicionário
-
-## IF 
-
-    if a > b:
-        print("a é maior que b")
-    
-    elif a == b:
-        print("a é igual a b")
-    
-    else:
-        print("a é menor que b")
-
+time = 20
+result = "Good day." if time < 18 else "Good evening."  # versão simplificada
+```
 ## WHILE
+```python
 
-    i = 1
-    while i < 6:
-        print(i)
-        if i == 3:
-            break
-        i += 1
-
-    j = 1
-    while j < 6:
-        j += 1
-        if j == 3:
-            continue
-        print(j)
-
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+```
 ## FOR
+```python
 
-**for x in enumerate(iterable)** 
-    - Para cada elemento e seu índice em um iterável
-
-    fruits = ["apple", "banana", "cherry"]
-    for index, value in enumerate(fruits):
-        print(index, value)
-
-**for x in range(6)** 
-    - Para cada número de 0 a 5
-
-    for x in range(6):
-        print(x)
-
+for i in range(5):
+    print(i)
+```
 ## FUNÇÕES
+```python
 
-**def my_function():** 
-    - Definição de função básica
-    
-    def my_function():
-        return "Hello, World!"
+def my_function():
+    print("Hello")
 
+def add(x, y):
+    return x + y
+```
+## CLASSES / OBJETOS
+```python
 
-**def my_function(*args, **kwargs):** 
-    - Aceita um número variável de argumentos posicionais (*args) e argumentos de palavra-chave (**kwargs)
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-    def my_function(*args, **kwargs):
-        for arg in args:
-            print(arg)
-        for key, value in kwargs.items():
-            print(key, value)
+    def print_info(self):
+        print("Name:", self.name, ", Age:", self.age)
 
-## LAMBDA
+# Criação de um objeto
+person1 = Person("John", 30)
+person1.print_info()  # Imprime "Name: John, Age: 30"
+```
+## TRATAMENTO DE EXCEÇÕES
+```python
 
-**x = lambda a: a** 
-    - Toma o argumento a e retorna-o
-
-    add_10 = lambda x: x + 10
-    print(add_10(5))  - Saída: 15
-
-
-## CLASSES
-    
-    class MyClass:
-        x = 5
-    
-    p1 = MyClass()
-    print(p1.x)
-
-    class Person:
-        def __init__(self, name, age):
-            self.name = name 
-            self.age = age
-
-        def printName(self):
-            print(self.name)
-
-    class Student(Person):
-        pass
-    
-    x = Student("Mike", 22)
-    x.printName()
-
-## MODULOS
-
-**import module** 
-    - Importa um módulo inteiro
-
-    import math
-
-**import module as alias** 
-    - Importa um módulo com um alias
-
-    import math as m
-
-**from module import name** 
-    - Importa um nome específico de um módulo
-
-    from math import sqrt
-
-**print(dir(module))** 
-    - Imprime todas as variáveis e nomes das funções do módulo
-
-    print(dir(math))
-
-**from package import module** 
-    - Importa um módulo de um pacote
-
-**from package.module import name** 
-    - Importa um nome específico de um módulo em um pacote
-
-    from os import path
+try:
+    # Bloco de código que pode gerar uma exceção
+except Exception as e:
+    # Bloco de código para tratar a exceção
+finally:
+    # Bloco de código a ser executado independentemente de uma exceção ser lançada ou não
+```
